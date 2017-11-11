@@ -12,4 +12,13 @@ const ShowCard = props => (
   </div>
 );
 
+ShowCard.propTypes = {
+  show: shape({
+    poster: string.isRequired,
+    title: string.isRequired,
+    year: string.isRequired,
+    description: string.isRequired
+  }).isRequired
+};
+
 export default ShowCard;
