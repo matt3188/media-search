@@ -12,6 +12,14 @@ class Search extends Component {
   render() {
     return (
       <div className="search">
+        <header>
+          <h1>Media Search</h1>
+          <input
+            type="text"
+            placeholder="Search"
+            value={this.state.searchTerm}
+          />
+        </header>
         <div>{preload.shows.map(show => <ShowCard key={show.imdbID} {...show} />)}</div>
       </div>
     );
