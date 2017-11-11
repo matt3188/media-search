@@ -7,7 +7,12 @@ class Search extends Component {
     super(props);
 
     this.state = {
+      searchTerm: ""
     };
+    this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
+  }
+  handleSearchTermChange(event) {
+    this.setState({ searchTerm: event.target.value });
   }
   render() {
     return (
@@ -17,6 +22,7 @@ class Search extends Component {
           <input
             type="text"
             placeholder="Search"
+            onChange={this.handleSearchTermChange}
             value={this.state.searchTerm}
           />
         </header>
